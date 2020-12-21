@@ -1,7 +1,8 @@
 #Include "TOTVS.ch"
 #Include 'Protheus.ch'
 /*/{Protheus.doc} User Function MT010BRW
-  (long_description)
+  (Adiciona mais opções de menu na Mbrowse ( ) --> aRotUser
+  Deve retornar um Array contendo as novas opções no menu)
   @type  Function
   @author Leandro Lemos
   @since 16/12/2020

@@ -1,7 +1,7 @@
 #Include "TOTVS.ch"
 #Include 'Protheus.ch'
 /*/{Protheus.doc} User Function MT010COR
-  (long_description)
+  (Ponto de Entrada para adicionar legenda de cores na tela de cadastro de produtos Mata010)
   @type  Function
   @author Leandro Lemos
   @since 16/12/2020
