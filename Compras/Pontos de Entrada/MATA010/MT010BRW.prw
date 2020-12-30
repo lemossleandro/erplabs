@@ -16,7 +16,9 @@
 USER FUNCTION MT010BRW ()
 
 	Local aLegMnu:={}
+
 	aAdd(aLegMnu,{"Legenda","U_MT010LEG", 0, 3, 0, Nil })
+  aAdd(aLegMnu,{"Aprovação","U_wfProdutos(SB1->B1_COD)", 0, 3, 0, Nil })
 
 RETURN aLegMnu
 

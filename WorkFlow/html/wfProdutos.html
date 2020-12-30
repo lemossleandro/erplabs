@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>WorkFlow alçada de produtos - ERPLabs</title>
+
+    <style>
+        .invoice-box {
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+            border: 1px solid #eee;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+            font-size: 16px;
+            line-height: 24px;
+            font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+            color: #555;
+        }
+        
+        .invoice-box table {
+            width: 100%;
+            line-height: inherit;
+            text-align: left;
+        }
+        
+        .invoice-box table td {
+            padding: 5px;
+            vertical-align: top;
+        }
+        
+        .invoice-box table tr td:nth-child(2) {
+            text-align: right;
+        }
+        
+        .invoice-box table tr.top table td {
+            padding-bottom: 20px;
+        }
+        
+        .invoice-box table tr.top table td.title {
+            font-size: 45px;
+            line-height: 45px;
+            color: #333;
+        }
+        
+        .invoice-box table tr.information table td {
+            padding-bottom: 40px;
+        }
+        
+        .invoice-box table tr.heading td {
+            background: #eee;
+            border-bottom: 1px solid #ddd;
+            font-weight: bold;
+        }
+        
+        .invoice-box table tr.details td {
+            padding-bottom: 20px;
+        }
+        
+        .invoice-box table tr.item td {
+            border-bottom: 1px solid #eee;
+        }
+        
+        .invoice-box table tr.item.last td {
+            border-bottom: none;
+        }
+        
+        .invoice-box table tr.total td:nth-child(2) {
+            border-top: 2px solid #eee;
+            font-weight: bold;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .invoice-box table tr.top table td {
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+            .invoice-box table tr.information table td {
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+        }
+        /** RTL **/
+        
+        .rtl {
+            direction: rtl;
+            font-family: Tahoma, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+        }
+        
+        .rtl table {
+            text-align: right;
+        }
+        
+        .rtl table tr td:nth-child(2) {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="post" action="mailto:%WFMailTo%" name="FrontPage_Form1" onSubmit="return FrontPage_Form1_Validator(this)">
+
+        <div class="invoice-box">
+            <table cellpadding="0" cellspacing="0">
+                <tr class="top">
+                    <td colspan="4">
+                        <table>
+                            <tr>
+                                <td class="title">
+                                    <img src="https://bit.ly/3psVrhU" />
+                                </td>
+                                <td>
+                                    Alçada Cadastro de Produtos<br />Produto #: %cCodPro% <br /> Data: %dDataAlc%
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr class="information">
+                    <td colspan="2">
+                        <table>
+                            <tr>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    Prezado %cNomeAprov%<br /> O produto %cCodPro% (%cProDesc%) aguarda sua ação.
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <tr class="heading">
+                    <td>Codigo</td>
+                    <td>Descrição</td>
+                    <td>UM</td>
+                    <td>Tipo</td>
+                </tr>
+
+                <tr class="item">
+                    <td>%cCodPro%</td>
+                    <td>%cProDesc%</td>
+                    <td>%cProUmc%</td>
+                    <td>%cProTipo%</td>
+                </tr>
+
+                <tr class="information">
+                    <td colspan="2">
+                        <table>
+                            <tr>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <br/>Esse documento elimina a necessidade de formulario impresso para aprovação
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+            </table>
+            <tr class="information">
+                <td colspan="2">
+                    <table>
+                        <tr>
+
+                        </tr>
+                        <tr>
+                            <td>Aprovado?</br>
+                                <input type="radio" checked name="Aprovacao" value="%Aprovacao%S" /> Sim
+                                <input type="radio" name="Aprovacao" value="%Aprovacao%N" />Não
+                                </br><input type="submit" name="B1" value="Enviar" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+        </div>
+
+    </form>
+</body>
+
+</html>
