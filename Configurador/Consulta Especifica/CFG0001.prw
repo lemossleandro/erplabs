@@ -177,4 +177,5 @@ Static Function fMontaArray(oSay,cCliNome,cCliCod,cGetDocCli)
 		oLbx:refresh()
 	EndIF
 
+
 Return
